@@ -1,0 +1,38 @@
+Bootstrap: docker
+From: almalinux:9
+
+%setup
+    mkdir -p ${APPTAINER_ROOTFS}/uufs
+    mkdir -p ${APPTAINER_ROOTFS}/scratch
+    mkdir -p ${APPTAINER_ROOTFS}/home
+
+%post
+    dnf install -y --allowerasing --nobest curl unzip git tar which wget vim
+
+    # Azure CLI (Microsoft rhel/9 repo)
+    rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    dnf install -y https://packages.microsoft.com/config/rhel/9/packages-microsoft-prod.rpm
+    dnf install -y azure-cli
+
+    # Java + Python for local pytest
+    dnf install -y java-17-openjdk-headless python3.11 python3.11-pip
+
+    # Databricks CLI (new Go CLI)
+    curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
+
+    # Dev venv
+    python3.11 -m venv /opt/venv-dev
+    /opt/venv-dev/bin/pip install --upgrade pip
+    /opt/venv-dev/bin/pip install "pyspark==4.2.0" pytest
+
+    dnf clean all
+
+%environment
+    export PATH=/opt/venv-dev/bin:/usr/local/bin:$PATH
+    export SPARK_LOCAL_IP=127.0.0.1
+    unset BASH_ENV ENV
+    unset -f module ml 2>/dev/null || true
+
+%runscript
+    source /opt/venv-dev/bin/activate
+    exec bash
