@@ -6,6 +6,7 @@ Prepare the configuration directory:
 mkdir -p ~/.dataeng-config/azure
 mkdir -p ~/.dataeng-config/databricks
 chmod 700 ~/.dataeng-config
+chmod -R go-rwx ~/.dataeng-config
 ```
 
 Consider:
