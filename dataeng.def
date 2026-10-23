@@ -5,6 +5,7 @@ From: almalinux:9
     mkdir -p ${APPTAINER_ROOTFS}/uufs
     mkdir -p ${APPTAINER_ROOTFS}/scratch
     mkdir -p ${APPTAINER_ROOTFS}/home
+    mkdir -p /cfg
 
 %post
     dnf install -y --allowerasing --nobest curl unzip git tar which wget vim
