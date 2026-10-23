@@ -45,6 +45,11 @@ apptainer shell --cleanenv \
   dataeng.sif
 ```
 
+Or:
+
+```bash
+bash login-command.sh
+```
 Verify:
 
 ```bash
@@ -68,3 +73,4 @@ Python 3.11.13
 Apptainer> python -c "import pyspark; print(pyspark.__version__)"
 4.2.0
 ```
+
