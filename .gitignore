@@ -3,3 +3,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.sif
+.venv*/
+.dataeng-config/
+spark-warehouse/
+metastore_db/
+derby.log
+.pytest_cache/
+.databricks/

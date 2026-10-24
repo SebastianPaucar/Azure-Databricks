@@ -1,0 +1,26 @@
+resources:
+  jobs:
+    olist_pipeline:
+      name: olist_pipeline
+
+      parameters:
+        - name: fechaproceso
+          default: "2018-08-31"
+        - name: ambiente
+          default: dev
+
+      environments:
+        - environment_key: default
+          spec:
+            environment_version: "2"
+
+      tasks:
+        - task_key: run_pipeline
+          environment_key: default
+          notebook_task:
+            notebook_path: ../notebooks/01_run_pipeline.py
+            base_parameters:
+              ambiente: "{{job.parameters.ambiente}}"
+              fechaproceso: "{{job.parameters.fechaproceso}}"
+              catalog: ${var.catalog}
+              raw_path: ${var.raw_path}

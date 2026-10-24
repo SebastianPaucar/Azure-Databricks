@@ -1,0 +1,18 @@
+bundle:
+  name: olist-vintage-lakehouse
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    default: workspace
+  raw_path:
+    default: /Volumes/workspace/bronze/raw
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-5f27b5b2-72da.cloud.databricks.com
