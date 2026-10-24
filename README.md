@@ -74,3 +74,18 @@ Apptainer> python -c "import pyspark; print(pyspark.__version__)"
 4.2.0
 ```
 
+**3. Log in to Azure and Databricks**
+
+Log in to Azure against the tenant ID:
+
+```bash
+az login --use-device-code --tenant <your-tenant-id> --allow-no-subscriptions
+az account show
+```
+
+Log in to Databricks (having created a PAT previously):
+
+```bash
+databricks configure --host https://<your-workspace-url>
+databricks current-user me
+```
