@@ -89,3 +89,12 @@ Log in to Databricks (having created a PAT previously):
 databricks configure --host https://<your-workspace-url>
 databricks current-user me
 ```
+
+Create a schema and a volume:
+
+```bash
+#Creates a schema (a folder-like grouping of tables) named bronze inside catalog workspace
+databricks schemas create bronze workspace
+#Creates a volume raw inside that schema. MANAGED means Databricks chooses and manages where the files are stored
+databricks volumes create workspace bronze raw MANAGED
+```
