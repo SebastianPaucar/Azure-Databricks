@@ -4,10 +4,12 @@ from pyspark.sql import SparkSession
 
 def get_spark(app="olist-vintage"):
     builder = SparkSession.builder.appName(app)
-    if not os.environ.get("CATALOG", "").strip():      # local run only
+    local = not os.environ.get("CATALOG", "").strip()
+    if local:
         builder = builder.config("spark.sql.catalogImplementation", "hive")
     spark = builder.getOrCreate()
-    spark.conf.set("spark.sql.sources.partitionOverwriteMode", "dynamic")
+    if local:
+        spark.conf.set("spark.sql.sources.partitionOverwriteMode", "dynamic")
     spark.conf.set("spark.sql.session.timeZone", "UTC")
     return spark
 

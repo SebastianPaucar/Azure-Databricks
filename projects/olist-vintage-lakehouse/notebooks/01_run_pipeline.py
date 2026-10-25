@@ -10,8 +10,10 @@ os.environ["CATALOG"] = dbutils.widgets.get("catalog")
 os.environ["OLIST_RAW_PATH"] = dbutils.widgets.get("raw_path")
 
 # notebook lives in <bundle>/files/notebooks; src is a sibling folder
-nb_dir = os.path.dirname(dbutils.notebook.entry_point.getDbutils().notebook().getContext().notebookPath().get())
-sys.path.insert(0, "/Workspace" + os.path.dirname(nb_dir) + "/src")
+#nb_dir = os.path.dirname(dbutils.notebook.entry_point.getDbutils().notebook().getContext().notebookPath().get())
+#sys.path.insert(0, "/Workspace" + os.path.dirname(nb_dir) + "/src")
+
+# packages now come from the installed wheel!
 
 from common.spark_utils import get_spark, ensure_schemas
 from common.config import seed_process_config, get_params, PROCESS

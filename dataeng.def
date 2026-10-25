@@ -24,7 +24,7 @@ From: almalinux:9
     # Dev venv
     python3.11 -m venv /opt/venv-dev
     /opt/venv-dev/bin/pip install --upgrade pip
-    /opt/venv-dev/bin/pip install "pyspark==4.2.0" pytest
+    /opt/venv-dev/bin/pip install "pyspark==4.2.0" pytest build
 
     dnf clean all
 
