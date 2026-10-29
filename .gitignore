@@ -11,3 +11,7 @@ metastore_db/
 derby.log
 .pytest_cache/
 .databricks/
+dist/
+build/
+*.egg-info/
+*.sif
