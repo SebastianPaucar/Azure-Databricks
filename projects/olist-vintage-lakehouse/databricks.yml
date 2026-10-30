@@ -16,3 +16,10 @@ targets:
     default: true
     workspace:
       host: https://dbc-5f27b5b2-72da.cloud.databricks.com
+  azure:
+    mode: development
+    workspace:
+      host: https://adb-7405618521447204.4.azuredatabricks.net
+    variables:
+      catalog: dbw_olist_learning
+      raw_path: /Volumes/dbw_olist_learning/bronze/raw

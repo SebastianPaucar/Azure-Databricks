@@ -1,5 +1,13 @@
-import sys
+# Databricks notebook source
+import os, sys
 from pyspark.sql import functions as F
+
+try:
+    dbutils.widgets.text("catalog", "workspace")
+    os.environ["CATALOG"] = dbutils.widgets.get("catalog")
+except NameError:
+    pass  # local run: CATALOG stays unset
+
 from common.spark_utils import get_spark, tbl
 
 COLS = ["cohort_month", "mob", "late_amount", "total_amount", "order_count", "late_order_count"]
@@ -23,5 +31,10 @@ def main(a="seller_vintage_long", b="seller_vintage_long_py"):
     return 0 if ok else 1
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+rc = main()
+try:
+    dbutils  # defined only on Databricks
+    assert rc == 0, "MISMATCH between SQL and PySpark gold tables"
+except NameError:
+    if __name__ == "__main__":
+        sys.exit(rc)

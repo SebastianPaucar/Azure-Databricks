@@ -14,7 +14,7 @@ resources:
           spec:
             environment_version: "2"
             dependencies:
-              - /Volumes/workspace/bronze/libs/olist_vintage_lakehouse-0.1.1-py3-none-any.whl
+              - /Volumes/${var.catalog}/bronze/libs/olist_vintage_lakehouse-0.1.1-py3-none-any.whl
 
       tasks:
         - task_key: run_pipeline
@@ -26,3 +26,11 @@ resources:
               fechaproceso: "{{job.parameters.fechaproceso}}"
               catalog: ${var.catalog}
               raw_path: ${var.raw_path}
+        - task_key: reconcile
+          depends_on:
+            - task_key: run_pipeline
+          environment_key: default
+          notebook_task:
+            notebook_path: ../notebooks/02_reconcile.py
+            base_parameters:
+              catalog: ${var.catalog}
