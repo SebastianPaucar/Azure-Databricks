@@ -22,6 +22,7 @@ The pipeline logic did not change. What changed is where the data lives, how ide
 
 How data and identities flow when the job runs (runtime):
 
+```mermaid
 flowchart LR
     CLI["Apptainer terminal<br/>databricks bundle run"] -->|"PAT, profile azure"| JOB
 
@@ -45,6 +46,7 @@ flowchart LR
 
     T1 -.->|"dbutils.secrets.get"| SS["Secret scope kv-olist"]
     SS -.->|"role: Key Vault Secrets User"| KV[("Key Vault kv-olist-13440<br/>databricks-token")]
+```
 
 Each arrow is an identity holding a role at a scope. The access connector reads and writes storage, Databricks reads Key Vault, the service principal manages resources, and the human owner administers everything, with no passwords in code.
 
@@ -155,6 +157,7 @@ Paths used by the code:
 
 ## 7. Identities and permissions
 
+```mermaid
 flowchart TB
     ME["Me (Owner)<br/>object ID caa15bd1"]
     SP["Service principal olist-learning-sp<br/>app ID 75d31b6e (login)<br/>object ID 906413d5 (roles)"]
@@ -170,6 +173,7 @@ flowchart TB
     SP -->|"Key Vault Secrets User (read only)"| KV
     ME -->|"Key Vault Secrets Officer (read and write)"| KV
     AC -->|"Storage Blob Data Contributor"| SA
+```
 
 | Identity | Role | Scope | Allows |
 |---|---|---|---|
@@ -186,6 +190,7 @@ Key concept, **control plane vs data plane**: Contributor manages the *resources
 
 ## 8. Setup workflow, step by step
 
+```mermaid
 flowchart TD
     subgraph P0["Phase 0 - Access"]
         A1["az login blocked<br/>AADSTS530035 security defaults + MFA"] --> A2["Cloud Shell as me (Owner)<br/>create service principal olist-learning-sp<br/>role Contributor on subscription"]
@@ -232,6 +237,7 @@ flowchart TD
     end
 
     P0 --> P1 --> P2 --> P3 --> P4 --> P5 --> P6
+```
 
 Legend: **[A]** Apptainer as SP, **[C]** Cloud Shell as me, **[UI]** Databricks workspace.
 
