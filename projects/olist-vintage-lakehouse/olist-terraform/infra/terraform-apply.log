@@ -1,0 +1,99 @@
+nohup: ignoring input
+[0m[1mrandom_string.suffix: Creating...[0m[0m
+[0m[1mrandom_string.suffix: Creation complete after 0s [id=x5a2f][0m
+[0m[1mazurerm_resource_group.this: Creating...[0m[0m
+[0m[1mazurerm_resource_group.this: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_resource_group.this: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_resource_group.this: Creation complete after 22s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf][0m
+[0m[1mazurerm_databricks_access_connector.this: Creating...[0m[0m
+[0m[1mazurerm_key_vault.this: Creating...[0m[0m
+[0m[1mazurerm_databricks_workspace.this: Creating...[0m[0m
+[0m[1mazurerm_storage_account.lake: Creating...[0m[0m
+[0m[1mazurerm_databricks_access_connector.this: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_databricks_access_connector.this: Creation complete after 13s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.Databricks/accessConnectors/dbac-olist-tf][0m
+[0m[1mazurerm_key_vault.this: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [30s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [30s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Still creating... [30s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [40s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [40s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Still creating... [40s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [50s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [50s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Still creating... [50s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [1m0s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [1m0s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Still creating... [1m0s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [1m10s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [1m10s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Still creating... [1m10s elapsed][0m[0m
+[0m[1mazurerm_storage_account.lake: Creation complete after 1m16s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.Storage/storageAccounts/stolistx5a2f][0m
+[0m[1mazurerm_role_assignment.connector_storage: Creating...[0m[0m
+[0m[1mazurerm_role_assignment.tf_sp_storage: Creating...[0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [1m20s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [1m20s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.connector_storage: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.tf_sp_storage: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [1m30s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [1m30s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.connector_storage: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.tf_sp_storage: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [1m40s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [1m40s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.tf_sp_storage: Creation complete after 27s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.Storage/storageAccounts/stolistx5a2f/providers/Microsoft.Authorization/roleAssignments/91a93335-bff8-fa04-eec1-060bc3cb1394][0m
+[0m[1mtime_sleep.rbac_propagation: Creating...[0m[0m
+[0m[1mazurerm_role_assignment.connector_storage: Creation complete after 28s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.Storage/storageAccounts/stolistx5a2f/providers/Microsoft.Authorization/roleAssignments/fbc57183-3934-dd54-41b2-39e576557f6c][0m
+[0m[1mazurerm_key_vault.this: Still creating... [1m50s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [1m50s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [2m0s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [2m0s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [2m10s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [2m10s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [30s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Still creating... [2m20s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [2m20s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [40s elapsed][0m[0m
+[0m[1mazurerm_key_vault.this: Creation complete after 2m29s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.KeyVault/vaults/kv-olist-x5a2f][0m
+[0m[1mazurerm_role_assignment.human_kv_officer: Creating...[0m[0m
+[0m[1mazurerm_role_assignment.sp_kv_user: Creating...[0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [2m30s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [50s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.human_kv_officer: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.sp_kv_user: Still creating... [10s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [2m40s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [1m0s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.sp_kv_user: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.human_kv_officer: Still creating... [20s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [2m50s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [1m10s elapsed][0m[0m
+[0m[1mazurerm_role_assignment.sp_kv_user: Creation complete after 26s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.KeyVault/vaults/kv-olist-x5a2f/providers/Microsoft.Authorization/roleAssignments/047332e3-c80a-ce69-ca5d-30ac1cc06c42][0m
+[0m[1mazurerm_role_assignment.human_kv_officer: Creation complete after 28s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.KeyVault/vaults/kv-olist-x5a2f/providers/Microsoft.Authorization/roleAssignments/17f9a5e0-8cf0-26a2-5950-272f55b1d0a0][0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [3m0s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [1m20s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Still creating... [3m10s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [1m30s elapsed][0m[0m
+[0m[1mazurerm_databricks_workspace.this: Creation complete after 3m15s [id=/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.Databricks/workspaces/dbw-olist-tf][0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [1m40s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Still creating... [1m50s elapsed][0m[0m
+[0m[1mtime_sleep.rbac_propagation: Creation complete after 2m0s [id=2026-11-03T16:26:40Z][0m
+[0m[1mazurerm_storage_data_lake_gen2_filesystem.containers["raw"]: Creating...[0m[0m
+[0m[1mazurerm_storage_data_lake_gen2_filesystem.containers["raw"]: Creation complete after 2s [id=https://stolistx5a2f.dfs.core.windows.net/raw][0m
+[0m[1m[32m
+Apply complete! Resources: 12 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0maccess_connector_id = "/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.Databricks/accessConnectors/dbac-olist-tf"
+catalog_name = "dbw_olist_tf"
+key_vault_id = "/subscriptions/4b651524-cabc-4100-8e85-eac10ed4019f/resourceGroups/rg-olist-tf/providers/Microsoft.KeyVault/vaults/kv-olist-x5a2f"
+key_vault_name = "kv-olist-x5a2f"
+key_vault_uri = "https://kv-olist-x5a2f.vault.azure.net/"
+storage_account_name = "stolistx5a2f"
+workspace_url = "https://adb-7405606316668844.4.azuredatabricks.net"

@@ -4,6 +4,11 @@ bundle:
 include:
   - resources/*.yml
 
+sync:
+  exclude:
+    - build/**
+    - dist/**
+    - "*.egg-info/**"
 variables:
   catalog:
     default: workspace
@@ -23,3 +28,10 @@ targets:
     variables:
       catalog: dbw_olist_learning
       raw_path: /Volumes/dbw_olist_learning/bronze/raw
+  azure_tf:
+    mode: development
+    workspace:
+      host: https://adb-7405606316668844.4.azuredatabricks.net
+    variables:
+      catalog: dbw_olist_tf
+      raw_path: /Volumes/dbw_olist_tf/bronze/raw

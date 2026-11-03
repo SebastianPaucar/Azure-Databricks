@@ -1,0 +1,6 @@
+# values come from: terraform -chdir=../infra output
+catalog_name         = "dbw_olist_tf"
+storage_account_name = "stolistXXXXX"
+access_connector_id  = "/subscriptions/<SUB>/resourceGroups/rg-olist-tf/providers/Microsoft.Databricks/accessConnectors/dbac-olist-tf"
+key_vault_id         = "/subscriptions/<SUB>/resourceGroups/rg-olist-tf/providers/Microsoft.KeyVault/vaults/kv-olist-XXXXX"
+key_vault_uri        = "https://kv-olist-XXXXX.vault.azure.net/"

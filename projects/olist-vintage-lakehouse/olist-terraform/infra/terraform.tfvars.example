@@ -1,0 +1,1 @@
+human_object_id = "<output of: az ad signed-in-user show --query id -o tsv>"

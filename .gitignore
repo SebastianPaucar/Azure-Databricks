@@ -15,3 +15,11 @@ dist/
 build/
 *.egg-info/
 *.sif
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+.terraform.lock.hcl
+trash/
